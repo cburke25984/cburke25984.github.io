@@ -1,0 +1,260 @@
+body {
+
+  font-family: "Gill Sans";
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #F6F0E5;
+}
+
+#title {
+  max-width: 350px;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+#crests {
+  max-width: 150px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.searchArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.help {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #262623;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding:0;
+}
+
+.signIn {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #262623;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding:0;
+}
+#bag {
+  max-width: 40px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding:0;
+}
+
+#query {
+  width: 322px;
+  height: 50px;
+  border-radius: 0px;
+  border: solid;
+  border-width: thin;
+  border-color: #E8DFCF;
+  font-family: "Gill Sans";
+  font-size: 1.5rem;
+  font-weight: 300;
+  background: url(search.svg) no-repeat;
+  background-color: #FFFFFF;
+  padding-left: 30px;
+}
+
+.menuBar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #E8DFCF;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.menuBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #E8DFCF;
+}
+
+.menuBar li {
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 3rem;
+  float: left;
+  color: #5F5A52;
+}
+
+.introduction {
+  display: flex;
+  background-color: #7DAFA4;
+}
+
+.introductionLeft {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 5rem;
+}
+
+.introductionLeft h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #F6F0E5;
+}
+
+.introductionLeft p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #262623;
+  padding-right: 8rem;
+}
+
+.description {
+  display: flex;
+  background-color: #F6F0E5;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+.description p {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #262623;
+  padding-bottom: 10rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #262623;
+}
+
+.chooseSize {
+  display: flex;
+  background-color: #FFFFFF;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+
+.chooseSize p {
+  font-size: 1.5rem;
+}
+
+.chooseSizeLarge {
+  border-color: #7DAFA4;
+}
+
+.chooseSizeSmall {
+  border-color: #7DAFA4;
+}
+
+.chooseFlavours {
+  display: flex;
+  background-color: #7DAFA4;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+
+.chooseFlavours p {
+  font-size: 1.5rem;
+}
+
+#chooseBiscuits {
+  display: flex;
+  background-color: #7DAFA4;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+
+.chooseMusic {
+  display: flex;
+  background-color: #F6F0E5;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+}
+
+.chooseMusic p {
+  font-size: 1.5rem;
+}
+
+.chooseMusic select {
+  background-color: #FFFFFF;
+  color: #262623;
+  padding: 1rem;
+  font-family: "Gill Sans";
+  font-weight: 300;
+  font-size: 16px;
+  border-color: #262623;
+  cursor: pointer;
+}
+
+.completedTin {
+  display: flex;
+  background-color: #FFFFFF;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
+
+.completedTinLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.completedTinRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.completedTinRight ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .completedTinRight li {
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 3rem;
+    float: left;
+    color: #262623;
+  }
+}
