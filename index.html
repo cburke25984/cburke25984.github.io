@@ -9,10 +9,11 @@
   <body>
     <div class="container">
       <div class="container-inside">
-        <section>
           <div class="header">
             <img id="crests" src="fm_crests.png" alt="Royal crests">
+            <button id="back"><img id="back" src="back_icon.png" alt="back icon"></button>
             <img id="title" src="fm_logo.png" alt="Fortnum & Mason title">
+            <button id="menu"><img id="menu" src="hamburger_menu.png" alt="menu icon"></button>
             <div class="top-right">
                <div class="help-sign-bag">
                   <button class="help">HELP</button>
@@ -26,7 +27,6 @@
               </div>
             </div>
           </div>
-        </section>
         <nav class="menuBar">
           <ul>
             <li><a href="#">Picnic</a></li>
@@ -40,40 +40,33 @@
             <li><a href="#">Gifts</a></li>
           </ul>
         </nav>
-      <section>
         <div class="introduction">
           <div class="introductionLeft">
             <h1>Merry Go Round Musical Biscuit Tin</h1>
             <p>As if our biscuits weren't soul-rousing enough, our all-singing and all-spinning tins will serenade you as you feast on their wonderful contents.</p>
           </div>
           <div class="introductionRight">
-            <img src="cookie_tin_bg_l.jpg" alt="Large musical carousel biscuit tin with background">
+            <img class="responsive" src="cookie_tin_bg_l.jpg" alt="Large musical carousel biscuit tin with background">
           </div>
         </div>
-      </section>
-      <section>
         <div class="description">
           <p>Bring back happy memories of childhood carousel rides with this magical Merry Go Round Biscuit Tin.</p>
-          <iframe width="840" height="472.5" src="https://www.youtube.com/embed/HzcD44u6E78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="video" width="840" height="472.5" src="https://www.youtube.com/embed/HzcD44u6E78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </section>
-      <section>
         <div class="chooseSize">
           <h2>Choose your size</h2>
           <p>We offer two sizes for you to choose from</p>
           <div class="large-small-tins">
             <div class="chooseSizeLarge">
-              <button id="largeTin"><img id="largeTin" src="cookie_tin_l.jpg" alt="Large musical carousel biscuit tin"></button>
+              <div id="largeTin"><img class="responsive" src="cookie_tin_l.jpg" alt="Large musical carousel biscuit tin"></div>
               <p>500g (40 biscuits)</p>
             </div>
             <div class="chooseSizeSmall">
-              <button id="smallTin"><img id="smallTin" src="cookie_tin_s.jpg" alt="Small musical carousel biscuit tin"></button>
+              <div id="smallTin"><img class="responsive" src="cookie_tin_s.jpg" alt="Small musical carousel biscuit tin"></div>
               <p>150g (12 biscuits)</p>
             </div>
         </div>
       </div>
-    </section>
-    <section>
       <div class="chooseFlavours">
         <h2>Choose your biscuits</h2>
         <p>Click the biscuits you want to add to your tin</p>
@@ -82,23 +75,23 @@
         </div>
         <div id="selectlist">
           <div class="col">
-            <img id="chocochip" src="choco_chip_cookie2.png" />
+            <img class="responsive" id="chocochip" src="choco_chip_cookie2.png" />
             <p>Chocolate Chip</p>
           </div>
           <div class="col">
-            <img id="whitechoco" src="white_chunk_macadamia.png" />
+            <img class="responsive" id="whitechoco" src="white_chunk_macadamia.png" />
             <p>White Chocolate Macadamia</p>
           </div>
           <div class="col">
-            <img id="oatmealraisin" src="oatmeal_raisin_with_walnuts.png" />
+            <img class="responsive" id="oatmealraisin" src="oatmeal_raisin_with_walnuts.png" />
             <p>Oatmeal, Raisin, & Walnuts</p>
           </div>
           <div class="col">
-            <img id="triplechoco" src="triple_chocolate.png" />
+            <img class="responsive" id="triplechoco" src="triple_chocolate.png" />
             <p>Triple Chocolate</p>
           </div>
           <div class="col">
-            <img id="chocooatmeal" src="dark_chocolate_oatmeal.png" />
+            <img class="responsive" id="chocooatmeal" src="dark_chocolate_oatmeal.png" />
             <p>Oatmeal & Dark Chocolate</p>
           </div>
        </div>
@@ -107,40 +100,27 @@
        </div>
      </div>
    </div>
- </section>
- <section>
    <div class="chooseMusic">
       <h2>Choose your music</h2>
       <p>Select the song you want your tin to play from the dropdown menu</p>
-      <img src="cookie_tin_bg_s.jpg" alt="Small musical carousel biscuit tin with background">
-      <label for="songs">
-         <select name="songs" id="songs">
-            <option value="" disabled selected>CHOOSE A SONG</option>
-            <option value="greensleeves" onmouseenter="playAudio()">Greensleeves</option>
-            <audio id="greensleevesSong" autoplay>
-               <source src="greensleeves.wav" type="audio/wav">
-               </source>
-            <option value="somewhereovertherainbow" onmouseenter="playAudio()">Somewhere Over the Rainbow</option>
-            <audio id="overTheRainbowSong" autoplay>
-               <source src="somewhere_over_the_rainbow.wav" type="audio/wav">
-               </source>
-            </audio>
-            <option value="lavieenrose" onmouseenter="playAudio()">La Vie en Rose</option>
-            <audio id="laVieEnRoseSong" autoplay>
-               <source src="la_vie_en_rose.wav" type="audio/wav">
-               </source>
-            </audio>
-         </select>
-      </label>
+      <img class="responsive" src="cookie_tin_bg_s.jpg" alt="Small musical carousel biscuit tin with background">
+      <select id="selection">
+        <option value="">- Select track -</option>
+        <option value="greensleeves.wav">Greensleeves</option>
+        <option value="somewhere_over_the_rainbow.wav">Somewhere Over the Rainbow</option>
+        <option value="la_vie_en_rose.wav">La Vie en Rose</option>
+      </select>
+      <br/>
+      <audio id="player">
+        <source id="wav_src" src="greensleeves.wav" type="audio/wav" />Your browser does not support the audio element.
+      </audio>
         <input id="SurpriseMe" class="button" type="button" value="SURPRISE ME!">
       </div>
-    </section>
-    <section>
       <div class="completedTin">
         <div class="completedTinLeft">
-          <img src="cookie_tin_s.jpg" alt="Small musical carousel biscuit tin">
+          <img class="responsive" src="cookie_tin_s.jpg" alt="Small musical carousel biscuit tin">
           <div class="completedTinItems">
-            <h2>Here's your completed biscuit tin!</h2>
+            <h2 class="completed">Here's your completed biscuit tin!</h2>
             <div class="col">
               <h3>Size</h3>
               <ul>
@@ -171,20 +151,6 @@
    </div>
  </div>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script type="text/javascript">
-    $(function(){
-       var $output = $('#output');
-       //$('#selectlist img').each(function(i, el){
-       //        $(this).addClass('img' + i);
-       //    });
-       $('#selectlist img').click(function(){
-                   $output.append($(this).clone());
-            });
-
-       $output.on('click','img',function(){
-           $(this).remove();
-       });
-       });
- </script>
+ <script src="jquery.js"></script>
 </body>
 </html>

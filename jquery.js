@@ -21,22 +21,37 @@ $(function(){
    });
    });
 
+// Choose Your Size //
+$('.chooseSizeLarge').on('click', function(){
+    $('.chooseSizeLarge .active').removeClass('active');
+    $(this).addClass('active');
+});
+
+$('.chooseSizeSmall').on('click', function(){
+    $('.chooseSizeSmall .active').removeClass('active');
+    $(this).addClass('active');
+});
 
 // For the music selector //
 //Defining variable based on unique ID
+$(document).ready(function() {
 
-var audio1 = document.getElementById("greensleevesSong");
-var audio2 = document.getElementById("overTheRainbowSong");
-var audio3 = document.getElementById("laVieEnRoseSong");
+  $('#selection').on('change', function() {
+    change($(this).val());
+  });
 
-//Example of an HTML Audio/Video Method
+});
 
-function playAudio() {
-  audio1.play();
-}
-function playAudio() {
-  audio2.play();
-}
-function playAudio() {
-  audio3.play();
+
+function change(sourceUrl) {
+  var audio = document.getElementById("player");
+  var source = document.getElementById("wav_src");
+
+  audio.pause();
+
+  if (sourceUrl) {
+    source.src = sourceUrl;
+    audio.load();
+    audio.play();
+  }
 }

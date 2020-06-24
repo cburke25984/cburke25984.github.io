@@ -1,16 +1,3 @@
-/* -- Media Queries -- */
-@media screen and (max-width: 320px)  {
-  nav.menuBar {
-      display: none;
-    }
-}
-@media screen and (min-width: 321px) and (max-width: 768px)  {
- /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-}
-@media screen and (min-width: 769px) {
-  /* hi-res laptops and desktops */
-}
-
 /* -- Global -- */
 body {
   font-family: "Gill Sans";
@@ -46,6 +33,21 @@ body {
   max-width: 150px;
 }
 
+#back {
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+  background: none;
+  padding: 0;
+}
 .help-sign-bag {
   display: flex;
   align-items: center;
@@ -65,6 +67,7 @@ body {
   background-position: 0.5rem 0.5rem;
   background-size: 20px 20px;
   background-color: #FFFFFF;
+  outline: none;
 }
 
 .help {
@@ -76,6 +79,11 @@ body {
   cursor: pointer;
   background: none;
   padding:0;
+  outline: none;
+}
+
+.help:hover {
+  color: #7DAFA4;
 }
 
 .help::after, .signIn::after {
@@ -93,6 +101,11 @@ body {
   cursor: pointer;
   background: none;
   padding:0;
+  outline: none;
+}
+
+.signIn:hover {
+  color: #7DAFA4;
 }
 
 #bag {
@@ -221,15 +234,19 @@ h2 {
   border: none;
   cursor: pointer;
   background: none;
-  padding:0;
 }
+
 
 #smallTin {
   border: none;
   cursor: pointer;
   background: none;
-  padding:0;
 }
+
+.active {
+  border: 5px solid #7DAFA4;
+}
+
 
 /* -- Choose Your Flavours -- */
 .chooseFlavours {
@@ -257,7 +274,9 @@ h2 {
 }
 
 .chooseFlavours p {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .flex-grid {
@@ -321,6 +340,8 @@ h2 {
 }
 
 /* -- Completed Tin -- */
+h2.completed { width: 100%; }
+
 .completedTin {
   background-color: #FFFFFF;
   padding-left: 8rem;
@@ -373,6 +394,11 @@ h2 {
   display: inline-block;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
+ }
+
+ #SurpriseMe:active {
+   background-color: #60542F;
  }
 
  #addToBag {
@@ -387,6 +413,11 @@ h2 {
   display: inline-block;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
+ }
+
+ #addToBag:active {
+   background-color: #60542F;
  }
 
  #edit {
@@ -402,4 +433,83 @@ h2 {
   display: inline-block;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
+ }
+
+ #edit:active {
+   background-color: #69958B;
+ }
+
+
+
+ /* -- Media Queries -- */
+ @media screen and (max-width: 600px)  {
+    body {
+      text-align: center;
+   }
+   #crests, .menuBar, .help-sign-bag, .searchArea {
+       display: none;
+     }
+     #title {
+        width: 70%;
+     }
+     #menu {
+       display: flex;
+       justify-content: flex-end;
+       border: none;
+       background: none;
+       padding-right: 1rem;
+     }
+     #back {
+       display: flex;
+       justify-content: flex-start;
+       border: none;
+       background: none;
+       padding-left:1rem;
+     }
+    .responsive { max-width: 100%; }
+    .introduction, #selectlist, .completedTinLeft {
+      flex-wrap: wrap;
+    }
+
+    .introductionLeft {
+      padding-top: 0rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+    .introductionLeft h1 {
+      font-size: 1.7rem;
+    }
+    .introductionLeft p {
+      font-size: 1.5rem;
+      padding-right: 1rem;
+    }
+
+    .description {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    .description p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+   }
+   .video { height: 250px; }
+
+   .chooseSize, .chooseFlavours, .chooseMusic, .completedTin {
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
+
+   .col, .completedTinBottom { margin-top: 0rem; }
+
+ }
+
+ @media screen and (min-width: 601px) {
+    #back, #menu {
+      display: none;
+   }
  }
